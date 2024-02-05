@@ -5,6 +5,10 @@
     ../../../common/pc/laptop/ssd
   ];
 
+  # Change ACPI state from S0 to S3
+  # https://www.kernel.org/doc/Documentation/power/states.txt
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
+
   # Allows for updating firmware via `fwupdmgr`.
   services.fwupd.enable = lib.mkDefault true;
 
