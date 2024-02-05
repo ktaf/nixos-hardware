@@ -5,6 +5,9 @@
     ../../../common/pc/laptop/ssd
   ];
 
+  # Allows for updating firmware via `fwupdmgr`.
+  services.fwupd.enable = lib.mkDefault true;
+
   # This will save you money and possibly your life!
   services.thermald.enable = lib.mkDefault true;
 
